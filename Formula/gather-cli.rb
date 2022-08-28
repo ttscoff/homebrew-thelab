@@ -7,7 +7,7 @@ class GatherCli < Formula
 
   bottle do
     root_url "https://ttscoff.jfrog.io/artifactory/bottles-thelab"
-    sha256 cellar: :any_skip_relocation, arm64_ventura: "53ee2ccba6b212402bb49f4fc0232e82c940b0e9cca88298d8547539f1c58597"
+    sha256 cellar: :any_skip_relocation, arm64_ventura: "bc11ef96ec4c3060848254b6423b8e19ceb18165d46645cc5baf57e548404c08"
   end
 
   def install
@@ -16,6 +16,6 @@ class GatherCli < Formula
 
   test do
     system "gather", "https://brettterpstra.com", "--file", "test.txt"
-    assert_predicate "test.txt", :exist?
+    assert_predicate "test.txt", :exists?
   end
 end
