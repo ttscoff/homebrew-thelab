@@ -11,8 +11,8 @@ class GatherCli < Formula
   end
 
   def install
-    mkdir("bin")
-    mv("gather", "bin")
+    # mkdir("bin")
+    # mv("gather", "bin")
     bin.install("gather")
   end
 
