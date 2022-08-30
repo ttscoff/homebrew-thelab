@@ -1,18 +1,17 @@
 class GatherCli < Formula
   desc "Readability and Markdown utility for saving web urls and HTML text"
   homepage "https://brettterpstra.com/projects/gather-cli/"
-  url "https://github.com/ttscoff/gather-cli/archive/refs/tags/2.0.24.tar.gz"
-  sha256 "60b07f37ecd1c99ef658a7f4a9b6f0831a822ffee65e3d6164b824c9c2c45e17"
-  license "MIT"
+  url "https://brettterpstra.com/projects/gather-cli",
+    tag: "2.0.24b", revision: "a2c083a50a21d6d8d3e8849454d4175100320693"
+  head "https://github.com/ttscoff/gather-cli.git"
 
-  depends_on "swift" => :build
+  depends_on xcode: ["10.0", :build]
 
   def install
-    system "xcrun", "swift", "build", "-c", "release"
-    bin.install ".build/apple/Products/Release/gather"
+    system "make", "install", "prefix=#{prefix}"
   end
 
   test do
-    system "false"
+    system "#{bin}/gather", "https://brettterpstra.com/2022/08/30/popclip-webmarkdown-fix-and-other-codesigning-adventures/"
   end
 end
