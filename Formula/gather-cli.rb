@@ -2,7 +2,7 @@ class GatherCli < Formula
   desc "Readability and Markdown utility for saving web urls and HTML text"
   homepage "https://brettterpstra.com/projects/gather-cli/"
   url "https://github.com/ttscoff/gather-cli.git",
-    tag: "2.0.24b", revision: "a2c083a50a21d6d8d3e8849454d4175100320693"
+    tag: "2.0.25", revision: "a7843bafa6b939f30cb3c5e66044aa13cbf32b6d"
   head "https://github.com/ttscoff/gather-cli.git"
 
   depends_on xcode: ["10.0", :build]
