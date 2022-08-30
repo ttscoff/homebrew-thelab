@@ -1,7 +1,7 @@
 class GatherCli < Formula
   desc "Readability and Markdown utility for saving web urls and HTML text"
   homepage "https://brettterpstra.com/projects/gather-cli/"
-  url "https://brettterpstra.com/projects/gather-cli",
+  url "https://github.com/ttscoff/gather-cli.git",
     tag: "2.0.24b", revision: "a2c083a50a21d6d8d3e8849454d4175100320693"
   head "https://github.com/ttscoff/gather-cli.git"
 
