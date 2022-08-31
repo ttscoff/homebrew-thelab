@@ -4,7 +4,12 @@
 
 `brew install ttscoff/thelab/<formula>`
 
-Or `brew tap ttscoff/thelab` and then `brew install <formula>`.
+Or: 
+
+```
+brew tap ttscoff/thelab
+brew install <formula>
+```
 
 ## Documentation
 
