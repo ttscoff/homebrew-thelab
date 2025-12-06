@@ -9,7 +9,7 @@ class Apex < Formula
   homepage "https://github.com/ttscoff/apex"
   url "https://github.com/ttscoff/apex.git",
       tag: "v0.1.10",
-      revision: "d82e80354315816fc4bd675fc40bb552e8c6aaf0"
+      revision: "3558e72daf02c0c79f12f02e279b24ffc46e868b"
   version "0.1.10"
   license "MIT"
 
