@@ -24,8 +24,10 @@ class Apex < Formula
   def install
     # Create build directory
     mkdir "build" do
-      # Configure with CMake
-      system "cmake", "-S", "..", "-B", ".", "-DCMAKE_BUILD_TYPE=Release"
+      # Configure with CMake (need policy version for cmark-gfm compatibility with newer CMake)
+      system "cmake", "-S", "..", "-B", ".",
+             "-DCMAKE_BUILD_TYPE=Release",
+             "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
 
       # Build only the CLI executable (not framework)
       system "cmake", "--build", ".", "--target", "apex_cli"
