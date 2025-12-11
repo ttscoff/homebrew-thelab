@@ -8,9 +8,9 @@ class Apex < Formula
   desc "Unified Markdown processor supporting CommonMark, GFM, MultiMarkdown, and Kramdown"
   homepage "https://github.com/ttscoff/apex"
   url "https://github.com/ttscoff/apex.git",
-      tag: "v0.1.19",
-      revision: "40a0b19248d423e33ac18fd5e66856a7f3d9a64d"
-  version "0.1.19"
+      tag: "v0.1.20",
+      revision: "3598d88bdefb296dd8aaf91a41326db9c4926d77"
+  version "0.1.20"
   license "MIT"
 
   depends_on "cmake" => :build
@@ -29,11 +29,16 @@ class Apex < Formula
              "-DCMAKE_BUILD_TYPE=Release",
              "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
 
-      # Build only the CLI executable (not framework)
+      # Build CLI executable (not framework)
+      # Man page is pre-generated in the repository
       system "cmake", "--build", ".", "--target", "apex_cli"
 
       # Install binary
       bin.install "apex"
+    end
+
+    # Install pre-generated man page
+    man1.install "man/apex.1"
     end
   end
 
