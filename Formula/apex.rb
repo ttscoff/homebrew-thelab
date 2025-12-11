@@ -39,7 +39,6 @@ class Apex < Formula
 
     # Install pre-generated man page
     man1.install "man/apex.1"
-    end
   end
 
   test do
