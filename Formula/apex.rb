@@ -8,9 +8,9 @@ class Apex < Formula
   desc 'Unified Markdown processor supporting CommonMark, GFM, MultiMarkdown, and Kramdown'
   homepage 'https://github.com/ttscoff/apex'
   url 'https://github.com/ttscoff/apex.git',
-      tag: 'v0.1.20',
-      revision: '3598d88bdefb296dd8aaf91a41326db9c4926d77'
-  version '0.1.20'
+      tag: 'v',
+      revision: ''
+  version ''
   license 'MIT'
 
   depends_on 'cmake' => :build
