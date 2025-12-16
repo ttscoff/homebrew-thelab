@@ -18,8 +18,7 @@ class Apex < Formula
   end
 
   def install
-    tar_dir = "apex-#{version}-macos-universal"
-    bin.install "#{tar_dir}/apex" => "apex"
+    bin.install "apex"
   end
 
   test do
