@@ -7,18 +7,27 @@
 class Apex < Formula
   desc "Unified Markdown processor supporting CommonMark, GFM, MultiMarkdown, and Kramdown"
   homepage "https://github.com/ApexMarkdown/apex"
-  version "0.1.35"
+  version "0.1.36"
   license "MIT"
 
   depends_on "libyaml"
 
   on_macos do
     url "https://github.com/ApexMarkdown/apex/releases/download/v#{version}/apex-#{version}-macos-universal.tar.gz"
-    sha256 "b0ebb40af40103347d4abdf03b8bbc154ba8149e553c77fc5b7e664813464e99"
+    sha256 "dfb7d89d64437fa92d94dd5a5147b2772df7d44591db1a6ee12efe9c9b21d868"
   end
 
   def install
     bin.install "apex"
+    # Fix libyaml path to point to Homebrew's libyaml
+    # This handles both Apple Silicon (/opt/homebrew) and Intel (/usr/local) installations
+    libyaml_path = "#{HOMEBREW_PREFIX}/lib/libyaml-0.2.dylib"
+    if File.exist?(libyaml_path)
+      system "install_name_tool", "-change",
+             "/Users/runner/work/apex/apex/deps/libyaml-universal/lib/libyaml-0.2.dylib",
+             libyaml_path,
+             bin/"apex"
+    end
   end
 
   test do
