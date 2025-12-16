@@ -1,17 +1,26 @@
+# Homebrew formula for gather-cli
+# To use this formula, create a tap:
+#   brew tap ttscoff/thelab https://github.com/ttscoff/homebrew-thelab
+# Then install:
+#   brew install gather-cli
+
 class GatherCli < Formula
   desc "Readability and Markdown utility for saving web urls and HTML text"
   homepage "https://brettterpstra.com/projects/gather-cli/"
-  url "https://github.com/ttscoff/gather-cli.git",
-    tag: "2.1.6", revision: "3c83b7b74459a06d42d0e43509e96201c8c3f476"
-  head "https://github.com/ttscoff/gather-cli.git"
+  version "2.1.6"
+  license "MIT"
 
-  depends_on xcode: ["10.0", :build]
+  on_macos do
+    url "https://github.com/ttscoff/gather-cli/releases/download/v#{version}/gather-cli-#{version}-macos-universal.tar.gz"
+    sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  end
 
   def install
-    system "make", "install", "prefix=#{prefix}"
+    bin.install "gather"
   end
 
   test do
     system "#{bin}/gather", "https://brettterpstra.com/2022/08/30/popclip-webmarkdown-fix-and-other-codesigning-adventures/"
   end
 end
+
