@@ -8,12 +8,13 @@ class Apex < Formula
   desc 'Unified Markdown processor supporting CommonMark, GFM, MultiMarkdown, and Kramdown'
   homepage 'https://github.com/ApexMarkdown/apex'
   url 'https://github.com/ApexMarkdown/apex.git',
-      tag: 'v0.1.29',
-      revision: '7827affb091844601634a951b64c7cc5a3bfd3b7'
-  version '0.1.29'
+      tag: 'v0.1.34',
+      revision: '814f72aa5fe4694fabd765108e236a0dad3aedc0'
+  version '0.1.34'
   license 'MIT'
 
   depends_on 'cmake' => :build
+  depends_on 'libyaml'
 
   # On macOS, Xcode command line tools are usually sufficient
   # but we can require Xcode if needed for framework builds
