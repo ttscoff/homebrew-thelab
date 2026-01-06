@@ -8,8 +8,8 @@
 class MdFixup < Formula
   desc "Markdown linter that normalizes formatting and wraps text"
   homepage "https://github.com/ttscoff/md-fixup"
-  url "https://github.com/ttscoff/md-fixup/archive/v0.1.4.tar.gz"
-  sha256 "2454076077a15b5d19b0aa8b3cf3f70d3006d7ec553b89bb28efa0b4f6610e2a"
+  url "https://github.com/ttscoff/md-fixup/archive/v0.1.5.tar.gz"
+  sha256 "3d92fdf0f3a69e74977e20680cec5236c509a5012eef1e70d701789d3d18c379"
   license "MIT"
   head "https://github.com/ttscoff/md-fixup.git", branch: "main"
 
