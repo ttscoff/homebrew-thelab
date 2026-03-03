@@ -2,12 +2,12 @@
 
 ## How do I install these formulae?
 
-`brew install ttscoff/thelab/<formula>`
+`brew install apexmarkdown/apexmarkdown/apex`
 
-Or: 
+Or:
 
 ```
-brew tap ttscoff/thelab
+brew tap apexmarkdown/apexmarkdown
 brew install <formula>
 ```
 
