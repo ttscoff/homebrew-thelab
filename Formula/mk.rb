@@ -1,12 +1,12 @@
 class Mk < Formula
   desc "Marked command line utility"
   homepage "https://markedapp.com"
-  version "3.0.34"
+  version "3.0.35"
   license "Proprietary"
 
   on_macos do
     url "https://github.com/ttscoff/mk/releases/download/v#{version}/mk-#{version}-macos-universal.tar.gz"
-    sha256 "e681b42452b1de578bddd03ed314fb5d885d7b4ad1baf015938931991bd4aae9"
+    sha256 "51b960ce46db0d6c4772dffc3d9b8c3b3d4efff6ebe02840b67f8ef286b4f590"
   end
 
   def install
