@@ -5,10 +5,10 @@
 class Graffiti < Formula
   desc "Fortune-style client for graffiti.moe"
   homepage "https://graffiti.moe"
-  url "https://github.com/ttscoff/graffiti/releases/download/v0.1.2/graffiti-0.1.2.tar.gz"
-  sha256 "ab775772eb81d3dcd089c41e0bfdf60c8c4bfa3efb19cb23531bcf062aaa7a4c"
+  url "https://github.com/ttscoff/graffiti/releases/download/v0.1.4/graffiti-0.1.4.tar.gz"
+  sha256 "b0ea0e54f36736e993e7bf26e2f3cc595b200d4c2d2999f7011d1b9789c0ccf9"
   license "MIT"
-  version "0.1.2"
+  version "0.1.4"
 
   depends_on "curl"
 
@@ -18,6 +18,6 @@ class Graffiti < Formula
 
   test do
     assert_match "Usage", shell_output("#{bin}/graffiti help")
-    assert_match "0.1.2", shell_output("#{bin}/graffiti --version")
+    assert_match "0.1.4", shell_output("#{bin}/graffiti --version")
   end
 end
