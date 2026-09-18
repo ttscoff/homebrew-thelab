@@ -17,6 +17,16 @@ class Apex < Formula
     sha256 "942b0b64920bfa4a78c831e8629015c8f862f630f2df4c7ebdd1f844aa07797e"
   end
 
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/ApexMarkdown/apex/releases/download/v#{version}/apex-#{version}-linux-x86_64.tar.gz"
+      sha256 "1a312ce40c617c8a9f26b008f11b072348dcd440b519b8023eb42a3847eedbb9"
+    else
+      url "https://github.com/ApexMarkdown/apex/releases/download/v#{version}/apex-#{version}-linux-aarch64.tar.gz"
+      sha256 "9a63a7ab1616ec5817115c8cfd3fd7be699d1e0bb6577e45df6b4e9a8054eeba"
+    end
+  end
+
   def install
     bin.install "apex"
     man1.install "apex.1" if File.exist?("apex.1")
